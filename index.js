@@ -19,5 +19,6 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     data = req.body;
+    res.send("Data received");
 }
 );
