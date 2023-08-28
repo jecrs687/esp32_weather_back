@@ -1,7 +1,7 @@
 import express from 'express';
 import event from 'events';
 import cors from 'cors';
-const PORT = 3000;
+const PORT = process.env.PORT || 3000 ;
 const app = express();
 
 var events = new event.EventEmitter();
