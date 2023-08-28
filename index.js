@@ -19,9 +19,10 @@ app.get('/', (req, res) => {
     })
     }
 );
-    
+
 app.post('/', (req, res) => {
-    events.emit('data', req.body)    
+    events.emit('data', req.body)  
+    console.log("data sent", req.body);  
     res.send('Data received');
 }
 );
