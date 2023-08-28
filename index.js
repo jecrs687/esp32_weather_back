@@ -11,18 +11,13 @@ app.listen(PORT, () => {
     })
 app.use(cors());
 app.use(express.json());
-
+var data = {};
 app.get('/', (req, res) => {
-    events.once('data', (data) => {
-        console.log(data);
-        res.send(data);
-    })
+    res.send(data);
     }
 );
 
 app.post('/', (req, res) => {
-    events.emit('data', req.body)  
-    console.log("data sent", req.body);  
-    res.send('Data received');
+    data = req.body;
 }
 );
