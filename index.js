@@ -13,11 +13,10 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    events.on('data', (data) => {
+    events.once('data', (data) => {
         console.log(data);
         res.send(data);
     })
-
     }
 );
     
