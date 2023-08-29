@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     Object.assign(req.body, {timestamp: Date.now()});
     data.push(req.body);
-    if(data.length > hour*4){
+    if(data.length > hour*2){
         data.shift();
     }
     res.send("Data received");
